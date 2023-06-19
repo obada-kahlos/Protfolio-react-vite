@@ -26,10 +26,6 @@ export const router = createBrowserRouter([
         path: "/Skills",
         element: <div> Skills </div>,
       },
-      // {
-      //   path: "/Something",
-      //   element: <div> Something </div>,
-      // },
     ],
   },
   {
