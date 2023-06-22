@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #1c2135;
+}
+
 .hover-icon {
   font-size: 18px;
   display: flex;

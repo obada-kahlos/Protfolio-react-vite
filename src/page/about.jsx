@@ -1,18 +1,25 @@
 import LightGallery from "lightgallery/react";
 import obadaImage from "/public/image/obada.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="bg-secondDarkBgColor min-h-screen px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
-      <LightGallery speed={500}>
-        <a href={obadaImage}>
-          <img
-            src={obadaImage}
-            className="w-[180px] h-[180px] rounded-full object-cover border-[2px] border-main-color"
-            alt=""
-          />
-        </a>
-      </LightGallery>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}>
+        <LightGallery speed={500}>
+          <a href={obadaImage}>
+            <img
+              src={obadaImage}
+              className="w-[180px] h-[180px] rounded-full object-cover border-[2px] border-main-color"
+              alt=""
+            />
+          </a>
+        </LightGallery>
+      </motion.div>
+
       <div className="flex justify-center items-center flex-col gap-1 mt-[20px]">
         <p className="text-main-color md:text-[32px] text-[18px]">
           HELLO, WORLD!
