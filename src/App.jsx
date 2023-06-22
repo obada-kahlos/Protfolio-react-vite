@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import { Root } from "./routes/root";
 import { ErrorPage } from "./error-page/error-page";
 import Contact from "./page/contact";
+import About from "./page/about";
+import Project from "./page/project";
+import Skill from "./page/skill";
 // import "./App.css";
 
 export const router = createBrowserRouter([
@@ -12,7 +15,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/About",
-        element: <div> About </div>,
+        element: <About />,
       },
       {
         path: "/Contact",
@@ -20,11 +23,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/Projects",
-        element: <div> Projects </div>,
+        element: <Project />,
       },
       {
         path: "/Skills",
-        element: <div> Skills </div>,
+        element: <Skill />,
       },
     ],
   },

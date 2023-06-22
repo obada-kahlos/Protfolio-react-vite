@@ -1,9 +1,9 @@
-const Contact = () => {
+const Project = () => {
   return (
     <div className="bg-secondDarkBgColor min-h-screen w-full flex justify-center items-center text-[#fff]">
-      contact
+      Projects
     </div>
   );
 };
 
-export default Contact;
+export default Project;
