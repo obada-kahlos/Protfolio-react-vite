@@ -5,6 +5,7 @@ import { BiUser, BiArrowBack } from "react-icons/bi";
 import { TbButterfly, TbBrandTelegram } from "react-icons/tb";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaFacebookF, FaWhatsapp, FaGithubAlt } from "react-icons/fa";
+import obadaImage from "/public/image/obada.jpg";
 // eslint-disable-next-line react/prop-types
 export const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
@@ -12,7 +13,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
   console.log({ pathname });
   const sidebarData = [
     {
-      url: "/About",
+      url: "/",
       text: "About",
       icon: <BiUser />,
     },
@@ -37,11 +38,11 @@ export const Sidebar = ({ isOpen, onClose }) => {
       <div className="sidebar relative w-[300px]  bg-secondDarkBgColor">
         <div className="h-screen overflow-hidden rounded-tr-[15px] rounded-br-[15px] bg-firstDarkBgColor flex justify-between flex-col">
           <div className="">
-            {pathname === "/About" ? null : (
+            {pathname === "/" ? null : (
               <div className="sidebar-about w-full flex items-center gap-3 py-[30px] border-b border-main-color px-2">
-                <Link to="/About" onClick={onClose}>
+                <Link to="/" onClick={onClose}>
                   <img
-                    src="/public/image/obada.jpg"
+                    src={obadaImage}
                     className="w-[60px] h-[60px] rounded-full object-cover"
                     alt=""
                   />

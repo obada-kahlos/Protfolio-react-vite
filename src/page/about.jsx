@@ -1,12 +1,13 @@
 import LightGallery from "lightgallery/react";
+import obadaImage from "/public/image/obada.jpg";
 
 const About = () => {
   return (
     <div className="bg-secondDarkBgColor min-h-screen px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
       <LightGallery speed={500}>
-        <a href="/public/image/obada.jpg">
+        <a href={obadaImage}>
           <img
-            src="/public/image/obada.jpg"
+            src={obadaImage}
             className="w-[180px] h-[180px] rounded-full object-cover border-[2px] border-main-color"
             alt=""
           />
