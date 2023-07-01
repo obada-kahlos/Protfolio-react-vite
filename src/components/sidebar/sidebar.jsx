@@ -34,7 +34,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
   return (
     <React.Fragment>
       <div className="sidebar relative w-[300px]  bg-secondDarkBgColor">
-        <div className="h-screen overflow-hidden rounded-tr-[15px] rounded-br-[15px] bg-firstDarkBgColor flex justify-between flex-col">
+        <div className="h-screen overflow-hidden rounded-tr-[15px] bg-firstDarkBgColor flex justify-between flex-col">
           <div className="">
             {pathname === "/" ? null : (
               <div className="sidebar-about w-full flex items-center gap-3 py-[30px] border-b border-main-color px-2">
@@ -76,10 +76,12 @@ export const Sidebar = ({ isOpen, onClose }) => {
       <style>
         {`
            a.active {
+            position : relative;
             background-color: #ff8700;
             color: #fff;
             display: block;
             width: 100%;
+            z-[3]
           }
           @media(max-width : 1024px){
             div.sidebar{

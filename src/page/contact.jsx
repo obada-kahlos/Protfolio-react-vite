@@ -58,8 +58,8 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <div className="bg-secondDarkBgColor min-h-screen px-[20px] md:pt-[0px] pt-[50px] w-full md:flex md:justify-center md:flex-col md:items-center text-[#fff]">
-        <div className="">
+      <div className="relative bg-secondDarkBgColor min-h-screen px-[20px] md:pt-[0px] pt-[50px] w-full md:flex md:justify-center md:flex-col md:items-center text-[#fff]">
+        <div className="w-full">
           <h1 className="mb-[30px] md:text-[40px] text-[28px] font-[550]">
             Get in touch.
           </h1>
