@@ -9,7 +9,7 @@ export const Root = () => {
 
   return (
     <>
-      <div className="flex">
+      <div className="md:flex">
         <div className="">
           <Sidebar isOpen={open} onClose={() => setOpen(false)} />
           <button

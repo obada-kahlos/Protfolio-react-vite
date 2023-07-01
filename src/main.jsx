@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { router } from "./App.jsx";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 
 // import styles
 import "lightgallery/css/lightgallery.css";

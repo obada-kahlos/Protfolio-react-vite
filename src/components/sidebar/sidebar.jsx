@@ -4,13 +4,11 @@ import { NavLink, Link, useParams, useLocation } from "react-router-dom";
 import { BiUser, BiArrowBack } from "react-icons/bi";
 import { TbButterfly, TbBrandTelegram } from "react-icons/tb";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { FaFacebookF, FaWhatsapp, FaGithubAlt } from "react-icons/fa";
 import obadaImage from "/public/image/obada.jpg";
 // eslint-disable-next-line react/prop-types
 export const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
   const { pathname } = location;
-  console.log({ pathname });
   const sidebarData = [
     {
       url: "/",
@@ -67,17 +65,6 @@ export const Sidebar = ({ isOpen, onClose }) => {
                 </NavLink>
               ))}
             </ul>
-          </div>
-          <div className="w-full flex justify-center items-center gap-4 py-[30px] border-t border-main-color px-2">
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center text-[#fff] border border-[#fff]">
-              <FaFacebookF />
-            </span>
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center text-[#fff] border border-[#fff]">
-              <FaWhatsapp />
-            </span>
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center text-[#fff] border border-[#fff]">
-              <FaGithubAlt />
-            </span>
           </div>
         </div>
       </div>

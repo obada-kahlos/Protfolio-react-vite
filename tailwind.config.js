@@ -7,6 +7,7 @@ export default {
         "main-color": "#ff8700",
         firstDarkBgColor: "#2A3044",
         secondDarkBgColor: "#1C2135",
+        error: "#d44040",
       },
     },
   },
