@@ -18,7 +18,9 @@ export const Root = () => {
             {open ? <MdCloseFullscreen /> : <AiOutlineMenuUnfold />}
           </button>
         </div>
-        <Outlet />
+        <div className="lg:ml-[300px]">
+          <Outlet />
+        </div>
       </div>
     </>
   );

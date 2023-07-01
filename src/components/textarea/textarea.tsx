@@ -4,7 +4,9 @@ import { Field } from "formik";
 const Textarea = ({ className, placeholder, label, name }) => {
   return (
     <React.Fragment>
-      <label className="text-[#ccc] my-[5px]"> {label} </label>
+      <div className="mt-[15px]">
+        <label className="text-[#ccc]"> {label} </label>
+      </div>
       <div className="relative">
         <Field
           as={"textarea"}

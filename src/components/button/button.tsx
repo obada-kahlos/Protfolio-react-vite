@@ -16,7 +16,7 @@ const Button = ({ text }) => {
             text-transform: uppercase;
             letter-spacing: 2.5px;
             font-weight: 500;
-            color: #ffffff60;
+            color: #ffffff90;
             background-color: rgba(255, 135, 0, 0.8);
             border: none;
             border-radius: 65px;

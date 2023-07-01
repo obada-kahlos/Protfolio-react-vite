@@ -8,9 +8,11 @@ import { Formik, Form, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [status, setStatus] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const schema = yup.object().shape({
     name: yup.string().required("name is required"),
@@ -22,6 +24,7 @@ const Contact = () => {
   });
 
   const handleSendEmail = (e) => {
+    setIsLoading(true);
     emailjs
       .send("service_3cp3xmu", "template_okwbtzk", e, "1VXwoicodZDNi66Cr")
       .then((res) => {
@@ -42,6 +45,7 @@ const Contact = () => {
   };
   useEffect(() => {
     if (status === 200) {
+      setIsLoading(false);
       toast.success("Thanks I will reply soon", {
         position: "top-center",
         autoClose: 5000,
@@ -77,7 +81,17 @@ const Contact = () => {
             <Form>
               <div className="md:grid md:grid-cols-12 w-full items-center md:gap-10">
                 <div className="md:col-span-6 col-span-12 w-full">
-                  <div className="w-full">
+                  <motion.div
+                    initial={{ opacity: 0, x: 0, y: 30, scale: 1, rotate: 0 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      scale: 1,
+                      rotate: 0,
+                    }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full">
                     <Input
                       className={"name-input"}
                       label={"Your Name"}
@@ -90,8 +104,18 @@ const Contact = () => {
                         <p className="text-error text-[14px]">{msg}</p>
                       )}
                     />
-                  </div>
-                  <div className="w-full">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 0, y: 30, scale: 1, rotate: 0 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      scale: 1,
+                      rotate: 0,
+                    }}
+                    transition={{ duration: 1.2 }}
+                    className="w-full">
                     <Input
                       className={"email-input"}
                       label={"Email"}
@@ -104,8 +128,18 @@ const Contact = () => {
                         <p className="text-error text-[14px]">{msg}</p>
                       )}
                     />
-                  </div>
-                  <div className="w-full">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 0, y: 30, scale: 1, rotate: 0 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      scale: 1,
+                      rotate: 0,
+                    }}
+                    transition={{ duration: 1.6 }}
+                    className="w-full">
                     <Textarea
                       className={"message"}
                       label={"Message"}
@@ -118,14 +152,36 @@ const Contact = () => {
                         <p className="text-error text-[14px]"> {meg} </p>
                       )}
                     />
-                  </div>
-                  <div className="w-full mt-[20px]">
-                    <Button text={"Send Message"} />
-                  </div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 0, y: 50, scale: 1, rotate: 0 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      scale: 1,
+                      rotate: 0,
+                    }}
+                    transition={{ duration: 2 }}
+                    className="w-full mt-[20px]">
+                    <Button
+                      text={`${isLoading ? "Sending..." : "Send Message"}`}
+                    />
+                  </motion.div>
                 </div>
-                <div className="col-span-6 md:block hidden">
+                <motion.div
+                  initial={{ opacity: 0, x: 0, y: 50, scale: 1, rotate: 0 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    scale: 1,
+                    rotate: 0,
+                  }}
+                  transition={{ duration: 2 }}
+                  className="col-span-6 md:block hidden">
                   <img src={contactImage} alt="" className="w-[500px]" />
-                </div>
+                </motion.div>
               </div>
             </Form>
           </Formik>

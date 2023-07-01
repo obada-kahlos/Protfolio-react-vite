@@ -5,6 +5,8 @@ import { BiUser, BiArrowBack } from "react-icons/bi";
 import { TbButterfly, TbBrandTelegram } from "react-icons/tb";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import obadaImage from "/public/image/obada.jpg";
+import { AiOutlineCloudDownload } from "react-icons/ai";
+
 // eslint-disable-next-line react/prop-types
 export const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
@@ -64,10 +66,21 @@ export const Sidebar = ({ isOpen, onClose }) => {
                   </li>
                 </NavLink>
               ))}
+              <a href={"/public/Pdf/CV.pdf"} download={true}>
+                <li
+                  onClick={onClose}
+                  className="transition hover:bg-main-color cursor-pointer text-white px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
+                  <span>
+                    <AiOutlineCloudDownload />
+                  </span>
+                  <p> {"Get My CV"} </p>
+                </li>
+              </a>
             </ul>
           </div>
         </div>
       </div>
+      <div className="fixed bottom-[-120px] blur-2xl left-[-120px] w-[300px] h-[300px] rounded-full bg-[#ff870020]"></div>
       {isOpen && (
         <div
           onClick={onClose}
@@ -75,6 +88,15 @@ export const Sidebar = ({ isOpen, onClose }) => {
       )}
       <style>
         {`
+           div.sidebar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            z-index: 999;
+            transition : 0.4s ease-in-out;
+            }
            a.active {
             position : relative;
             background-color: #ff8700;
