@@ -77,8 +77,8 @@ const Project = () => {
     },
   ];
   return (
-    <div className="bg-secondDarkBgColor min-h-screen md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
-      <h1 className="text-[#fff] md:text-[40px] my-[20px] text-[22px]">
+    <div className="dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-screen md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
+      <h1 className="dark:text-titleDarkColor text-titleLightColor md:text-[40px] my-[20px] text-[22px]">
         My projects<span className="text-main-color">.</span>
       </h1>
       <div className="w-full mb-[30px]">

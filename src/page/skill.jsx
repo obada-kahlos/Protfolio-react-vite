@@ -107,8 +107,8 @@ const Skill = () => {
   ];
 
   return (
-    <div className="bg-secondDarkBgColor min-h-screen md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
-      <h1 className="text-[#fff] md:text-[40px] my-[20px] text-[22px]">
+    <div className="dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-screen px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
+      <h1 className="dark:text-titleDarkColor text-titleLightColor md:text-[40px] my-[20px] text-[22px]">
         Front End Development<span className="text-main-color">.</span>
       </h1>
       <div className="grid grid-cols-12 gap-4 w-full">

@@ -35,8 +35,8 @@ export const Sidebar = ({ isOpen, onClose }) => {
   ];
   return (
     <React.Fragment>
-      <div className="sidebar relative w-[300px]  bg-secondDarkBgColor">
-        <div className="h-screen overflow-hidden rounded-tr-[15px] bg-firstDarkBgColor flex justify-between flex-col">
+      <div className="sidebar relative w-[300px] bg-whiteLightBgColor dark:bg-secondDarkBgColor">
+        <div className="h-screen overflow-hidden dark:bg-firstDarkBgColor bg-sidebarLightBgColor flex justify-between flex-col">
           <div className="">
             {pathname === "/" ? null : (
               <div className="sidebar-about w-full flex items-center gap-3 py-[30px] border-b border-main-color px-2">
@@ -48,8 +48,8 @@ export const Sidebar = ({ isOpen, onClose }) => {
                   />
                 </Link>
                 <div className="">
-                  <h4 className="text-white text-[17px]"> Obada Kahlous </h4>
-                  <p className="text-[#d8d8d8] text-[15px]">
+                  <h4 className="dark:text-white text-[17px]">Obada Kahlous</h4>
+                  <p className="dark:text-[#d8d8d8] text-[15px]">
                     Front-End Developer
                   </p>
                 </div>
@@ -60,7 +60,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
                 <NavLink to={sideItem.url} key={`${key}-${sideItem.text}`}>
                   <li
                     onClick={onClose}
-                    className="transition hover:bg-main-color cursor-pointer text-white px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
+                    className="transition hover:bg-main-color cursor-pointer dark:text-white hover:text-[#fff] px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
                     <span> {sideItem.icon} </span>
                     <p> {sideItem.text} </p>
                   </li>
@@ -69,7 +69,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
               <a href={"/public/Pdf/CV.pdf"} download={true}>
                 <li
                   onClick={onClose}
-                  className="transition hover:bg-main-color cursor-pointer text-white px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
+                  className="transition hover:bg-main-color cursor-pointer dark:text-white hover:text-[#fff] px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
                   <span>
                     <AiOutlineCloudDownload />
                   </span>
@@ -80,7 +80,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-[-120px] blur-2xl left-[-120px] w-[300px] h-[300px] rounded-full bg-[#ff870020]"></div>
+      <div className="fixed bottom-[-120px] blur-2xl left-[-120px] w-[300px] h-[300px] rounded-full dark:bg-[#ff870020]"></div>
       {isOpen && (
         <div
           onClick={onClose}

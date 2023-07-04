@@ -62,9 +62,9 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <div className="relative bg-secondDarkBgColor min-h-screen px-[20px] md:pt-[0px] pt-[50px] w-full md:flex md:justify-center md:flex-col md:items-center text-[#fff]">
-        <h1 className="text-[#fff] md:text-[40px] my-[20px] text-[22px]">
-          Get in touch.<span className="text-main-color">.</span>
+      <div className="relative dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-screen px-[20px] md:pt-[0px] pt-[50px] w-full md:flex md:justify-center md:flex-col md:items-center text-[#fff]">
+        <h1 className="dark:text-titleDarkColor text-titleLightColor md:text-[40px] my-[20px] text-[22px]">
+          Get in touch<span className="text-main-color">.</span>
         </h1>
         <div className="w-full">
           <Formik

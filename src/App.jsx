@@ -5,6 +5,7 @@ import Contact from "./page/contact";
 import About from "./page/about";
 import Project from "./page/project";
 import Skill from "./page/skill";
+import "react-lazy-load-image-component/src/effects/blur.css";
 // import "./App.css";
 
 export const router = createBrowserRouter([

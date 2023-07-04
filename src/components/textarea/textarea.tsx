@@ -5,12 +5,15 @@ const Textarea = ({ className, placeholder, label, name }) => {
   return (
     <React.Fragment>
       <div className="mt-[15px]">
-        <label className="text-[#ccc]"> {label} </label>
+        <label className="dark:text-paragraphDarkColor text-paragraphLightColor">
+          {" "}
+          {label}{" "}
+        </label>
       </div>
       <div className="relative">
         <Field
           as={"textarea"}
-          className={`${className}`}
+          className={`${className} border-b-[3px] dark:border-titleDarkColor border-titleLightColor`}
           rows={5}
           placeholder={placeholder}
           name={name}
@@ -23,7 +26,6 @@ const Textarea = ({ className, placeholder, label, name }) => {
                 width : 100%;
                 font-size : 18px;
                 padding : 10px 10px 10px 10px;
-                border-bottom : 3px solid #fff;
                 background-color : transparent;
                 resize : none;
             }
