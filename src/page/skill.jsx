@@ -1,4 +1,4 @@
-import { SkillCart } from "../components/skill-cart/skill-cart";
+import SkillCart from "../components/skill-cart/skill-cart";
 import {
   SiRedux,
   SiReduxsaga,

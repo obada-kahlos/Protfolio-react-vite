@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Loader = () => {
+const Loader = () => {
   return (
     <React.Fragment>
       <div className="fixed z-[999999999] top-0 left-0 w-full h-screen bg-secondDarkBgColor flex justify-center items-center">
@@ -74,3 +74,5 @@ export const Loader = () => {
     </React.Fragment>
   );
 };
+
+export default Loader;

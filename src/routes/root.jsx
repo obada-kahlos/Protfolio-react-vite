@@ -3,7 +3,7 @@ import { Sidebar } from "../components/sidebar/sidebar";
 import { useEffect, useState } from "react";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { MdCloseFullscreen } from "react-icons/md";
-import { Loader } from "../components/loader/loader";
+import Loader from "../components/loader/loader";
 
 export const Root = () => {
   const [open, setOpen] = useState(false);
