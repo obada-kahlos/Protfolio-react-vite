@@ -37,6 +37,7 @@ const Nav = () => {
            .switch {
             display: inline-block;
             position: relative;
+            margin-top: 8px;
         }
         
         .switch__input {

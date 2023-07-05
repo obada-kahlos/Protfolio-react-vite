@@ -46,7 +46,7 @@ const Skill = () => {
     },
     {
       icon: <SiTailwindcss color="#1bcede" size="40px" />,
-      text: "javascript",
+      text: "Tailwindcss",
       level: "advanced",
     },
     {
@@ -60,7 +60,12 @@ const Skill = () => {
       level: "beginner",
     },
     {
-      icon: <AiOutlineGithub color="#ffffff" size="40px" />,
+      icon: (
+        <AiOutlineGithub
+          className="dark:text-titleDarkColor text-titleLightColor"
+          size="40px"
+        />
+      ),
       text: "git/github",
       level: "intermediate",
     },
@@ -100,7 +105,12 @@ const Skill = () => {
       level: "beginner",
     },
     {
-      icon: <TbBrandNextjs color="#ffffff" size="40px" />,
+      icon: (
+        <TbBrandNextjs
+          className="dark:text-titleDarkColor text-titleLightColor"
+          size="40px"
+        />
+      ),
       text: "Next js",
       level: "intermediate",
     },
