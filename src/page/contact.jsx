@@ -179,7 +179,7 @@ const Contact = () => {
                     rotate: 0,
                   }}
                   transition={{ duration: 2 }}
-                  className="col-span-6 md:block hidden">
+                  className="col-span-6 flex justify-center items-center">
                   <img src={contactImage} alt="" className="w-[500px]" />
                 </motion.div>
               </div>
