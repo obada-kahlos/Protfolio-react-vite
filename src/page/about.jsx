@@ -3,7 +3,8 @@ import LightGallery from "lightgallery/react";
 import obadaImage from "/public/image/obada.jpg";
 // import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { FaFacebookF, FaWhatsapp, FaGithubAlt } from "react-icons/fa";
+import { FaWhatsapp, FaGithubAlt } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
 
 const About = () => {
   return (
@@ -47,15 +48,25 @@ const About = () => {
             environments and good communication with the team work
           </p>
           <div className="w-full flex justify-center items-center md:gap-10 gap-2 py-[30px] px-2">
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
-              <FaFacebookF />
-            </span>
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+            <a
+              href="https://wa.me/963947059779"
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
               <FaWhatsapp />
-            </span>
-            <span className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+            </a>
+            <a
+              href="https://github.com/obada-kahlos"
+              target="_blank"
+              rel="noreferrer"
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
               <FaGithubAlt />
-            </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/obada-kahlous"
+              target="_blank"
+              rel="noreferrer"
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+              <AiFillLinkedin />
+            </a>
           </div>
         </div>
       </div>
