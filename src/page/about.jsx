@@ -49,6 +49,8 @@ const About = () => {
           </p>
           <div className="w-full flex justify-center items-center md:gap-10 gap-2 py-[30px] px-2">
             <a
+              target="_blank"
+              rel="noreferrer"
               href="https://wa.me/963947059779"
               className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
               <FaWhatsapp />
