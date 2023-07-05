@@ -17,93 +17,204 @@ const Nav = () => {
 
   return (
     <React.Fragment>
-      <div className="sticky z-[9999] flex items-center justify-end h-[54px] py-[10px] px-[20px] top-0 right-0 w-full dark:bg-firstDarkBgColor bg-sidebarLightBgColor">
-        {/* <button className="text-black">
-          Toggle {darkMode ? "Light Mode" : "Dark Mode"}
-        </button> */}
-        {/* <label className="relative inline-flex items-center cursor-pointer">
+      <div className="sticky z-[998] flex items-center justify-end h-[54px] py-[10px] px-[20px] top-0 right-0 w-full dark:bg-firstDarkBgColor bg-sidebarLightBgColor">
+        <div className="switch">
           <input
             type="checkbox"
-            value=""
-            className="sr-only peer"
-            
-          />
-          <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-          <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-            {darkMode ? "Light" : "Dark"}
-          </span>
-        </label> */}
-
-        <label className="switch">
-          <input
-            type="checkbox"
-            checked={darkMode}
+            checked={!darkMode}
+            className="switch__input"
+            id="Switch"
             onClick={() => setDarkMode(!darkMode)}
           />
-          <span className="slider round"></span>
-        </label>
+          <label className="switch__label" htmlFor="Switch">
+            <span className="switch__indicator"></span>
+            <span className="switch__decoration"></span>
+          </label>
+        </div>
       </div>
       <style>
         {`
-            .switch {
-              position: relative;
-              display: inline-block;
-              width: 60px;
-              height: 28px;
+           .switch {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .switch__input {
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+        }
+        
+        .switch__label {
+            position: relative;
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            background-color: #2B2B2B;
+            border: 5px solid #5B5B5B;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(.46,.03,.52,.96);
+        }
+        
+        .switch__indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateX(-72%);
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: #7B7B7B;
+            border-radius: 9999px;
+            box-shadow: 10px 0px 0 0 rgba(#000000, 0.2) inset;
+        
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                background-color: #FFFFFF;
+                border-radius: 9999px;
             }
-            
-            .switch input { 
-              opacity: 0;
-              width: 0;
-              height: 0;
+        
+            &::before {
+                top: 5px;
+                left: 5px;
+                width: 6px;
+                height: 6px;
+                background-color: #FFFFFF;
+                opacity: 0.6;
             }
-            
-            .slider {
-              position: absolute;
-              cursor: pointer;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: #ccc;
-              -webkit-transition: .4s;
-              transition: .4s;
+        
+            &::after {
+                bottom: 7px;
+                right: 7px;
+                width: 8px;
+                height: 8px;
+                background-color: #FFFFFF;
+                opacity: 0.8;
             }
-            
-            .slider:before {
-              position: absolute;
-              content: "";
-              height: 20px;
-              width: 20px;
-              left: 8px;
-              bottom: 4px;
-              background-color: white;
-              -webkit-transition: .4s;
-              transition: .4s;
+        }
+        
+        .switch__decoration {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: #FFFFFF;
+            border-radius: 9999px;
+            animation: twinkle 0.8s infinite -0.6s;
+        
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color: #FFFFFF;
+                border-radius: 9999px;
             }
-            
-            input:checked + .slider {
-              background-color: #2196F3;
+        
+            &::before {
+                top: -20px;
+                left: 10px;
+                opacity: 1;
+                animation: twinkle 0.6s infinite;
             }
-            
-            input:focus + .slider {
-              box-shadow: 0 0 1px #2196F3;
+        
+            &::after {
+                top: -7px;
+                left: 30px;
+                animation: twinkle 0.6s infinite -0.2s;
             }
-            
-            input:checked + .slider:before {
-              -webkit-transform: translateX(26px);
-              -ms-transform: translateX(26px);
-              transform: translateX(26px);
+        }
+        
+        @keyframes twinkle {
+            50% { opacity: 0.2; }
+        }
+        
+        .switch__indicator {
+            &,
+            &::before,
+            &::after {
+                transition: all 0.4s cubic-bezier(.46,.03,.52,.96);
             }
-            
-            /* Rounded sliders */
-            .slider.round {
-              border-radius: 34px;
+        }
+        
+        .switch__input:checked + .switch__label {
+            background-color: #8FB5F5;
+            border-color: #347CF8;
+        
+            .switch__indicator {
+                background-color: #ECD21F;
+                box-shadow: none;
+                transform: translate(-50%, -50%) translateX(72%);
+        
+                &::before,
+                &::after {
+                    display: none;
+                }
             }
-            
-            .slider.round:before {
-              border-radius: 50%;
+        
+            .switch__decoration {
+                top: 50%;
+                transform: translate(0%, -50%);
+                animation: cloud 8s linear infinite;
+        
+                width: 20px;
+                height: 20px;
+        
+                &::before {
+                    width: 10px;
+                    height: 10px;
+                    top: auto;
+                    bottom: 0;
+                    left: -8px;
+                    animation: none;
+                }
+        
+                &::after {
+                    width: 15px;
+                    height: 15px;
+                    top: auto;
+                    bottom: 0;
+                    left: 16px;
+                    animation: none;
+                }
+        
+                &,
+                &::before,
+                &::after {
+                    border-radius: 9999px 9999px 0 0;
+                }
+        
+                &::after {
+                    border-bottom-right-radius: 9999px;
+                }
             }
+        }
+        
+        @keyframes cloud {
+            0% {
+                transform: translate(0%, -50%);
+            }
+            50% {
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                transform: translate(0%, -50%);
+            }
+        }
+        
           `}
       </style>
     </React.Fragment>

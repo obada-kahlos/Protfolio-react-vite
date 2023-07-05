@@ -25,7 +25,7 @@ export const Root = () => {
           <div className="">
             <Sidebar isOpen={open} onClose={() => setOpen(false)} />
             <button
-              className="lg:hidden z-[999] fixed bottom-[20px] right-[20px] flex justify-center items-center cursor-pointer text-[18px] w-[50px] h-[50px] rounded-full dark:text-titleLightColor border dark:border-titleLightColor text-white border-white"
+              className="lg:hidden z-[999] fixed bottom-[20px] right-[20px] flex justify-center items-center cursor-pointer text-[18px] w-[50px] h-[50px] rounded-full dark:text-titleDarkColor border dark:border-titleDarkColor text-titleLightColor border-titleLightColor"
               onClick={() => setOpen(!open)}>
               {open ? <MdCloseFullscreen /> : <AiOutlineMenuUnfold />}
             </button>
