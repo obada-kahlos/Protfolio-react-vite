@@ -66,7 +66,11 @@ export const Sidebar = ({ isOpen, onClose }) => {
                   </li>
                 </NavLink>
               ))}
-              <a href={"/public/Pdf/CV.pdf"} download={"Obada-Kahlous_CV.pdf"}>
+              <Link
+                to={"/Pdf/CV.pdf"}
+                target="_blank"
+                rel="noreferrer"
+                download={"Obada-Kahlous_CV.pdf"}>
                 <li
                   onClick={onClose}
                   className="transition hover:bg-main-color cursor-pointer dark:text-white hover:text-[#fff] px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">
@@ -75,7 +79,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
                   </span>
                   <p> {"Get My CV"} </p>
                 </li>
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
