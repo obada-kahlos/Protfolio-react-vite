@@ -72,7 +72,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="fixed top-[-120px] blur-2xl right-[-120px] w-[300px] h-[300px] rounded-full bg-[#ff870020]"></div>
     </React.Fragment>
   );
 };

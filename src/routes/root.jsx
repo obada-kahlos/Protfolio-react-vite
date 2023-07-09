@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { MdCloseFullscreen } from "react-icons/md";
 import Loader from "../components/loader/loader";
-import Nav from "../components/nav/nav";
+import { Nav } from "../components/nav/nav";
 
 export const Root = () => {
   const [open, setOpen] = useState(false);
@@ -34,6 +34,8 @@ export const Root = () => {
             <Nav />
             <Outlet />
           </div>
+          <div className="fixed top-[-120px] blur-2xl right-[-120px] w-[300px] h-[300px] rounded-full bg-[#ff870020]"></div>
+          <div className="fixed bottom-[-120px] z-[999] blur-2xl left-[-120px] w-[300px] h-[300px] rounded-full bg-[#ff870020]"></div>
         </div>
       )}
     </>

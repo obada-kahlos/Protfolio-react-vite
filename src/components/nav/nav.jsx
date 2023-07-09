@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Nav = () => {
+export const Nav = () => {
   const [darkMode, setDarkMode] = useState(localStorage.theme === "dark");
 
   useEffect(() => {
@@ -212,5 +212,3 @@ const Nav = () => {
     </React.Fragment>
   );
 };
-
-export default Nav;
