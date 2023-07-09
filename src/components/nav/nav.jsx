@@ -6,10 +6,10 @@ export const Nav = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      localStorage.theme = "light";
+      localStorage.theme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.theme = "dark";
+      localStorage.theme = "light";
     }
   }, [darkMode]);
   return (
