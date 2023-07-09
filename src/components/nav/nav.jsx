@@ -6,15 +6,12 @@ export const Nav = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
+      localStorage.theme = "light";
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
+      localStorage.theme = "dark";
     }
   }, [darkMode]);
-
-  console.log({ darkMode });
-
   return (
     <React.Fragment>
       <div className="sticky z-[998] flex items-center justify-end h-[54px] py-[10px] px-[20px] top-0 right-0 w-full dark:bg-firstDarkBgColor bg-sidebarLightBgColor">
