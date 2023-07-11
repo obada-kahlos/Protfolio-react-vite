@@ -12,7 +12,7 @@ const Input = ({ className, placeholder, label, name }) => {
       <div className="relative">
         <Field
           type="text"
-          className={`${className} border-b-[3px] dark:border-titleDarkColor border-titleLightColor`}
+          className={`${className} border-b-[3px] dark:border-titleDarkColor dark:text-titleDarkColor border-titleLightColor text-titleLightColor`}
           placeholder={placeholder}
           name={name}
         />

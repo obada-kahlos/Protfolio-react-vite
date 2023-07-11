@@ -23,41 +23,49 @@ const Skill = () => {
       icon: <SiHtml5 color="#e46212" size="40px" />,
       text: "html",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiCss3 color="#10aed2" size="40px" />,
       text: "css",
       level: "advanced",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <SiJavascript color="#d2bb10" size="40px" />,
       text: "javascript",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiTypescript color="#108bd2" size="40px" />,
       text: "typescript",
       level: "intermediate",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <SiBootstrap color="#5a10d2" size="40px" />,
       text: "bootstrap",
       level: "intermediate",
+      reverse: "flex-row",
     },
     {
       icon: <SiTailwindcss color="#1bcede" size="40px" />,
       text: "Tailwindcss",
       level: "advanced",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <AiOutlineFullscreenExit color="#5a10d2" size="40px" />,
       text: "Responsive",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiJquery color="#5a10d2" size="40px" />,
       text: "Jquery",
       level: "beginner",
+      reverse: "flex-row-reverse",
     },
     {
       icon: (
@@ -68,41 +76,49 @@ const Skill = () => {
       ),
       text: "git/github",
       level: "intermediate",
+      reverse: "flex-row",
     },
     {
       icon: <SiReact color="#10aed2" size="40px" />,
       text: "react js",
       level: "advanced",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <VscJson color="#f1cf0d" size="40px" />,
       text: "Restful API",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiRedux color="#9810d2" size="40px" />,
       text: "redux",
       level: "intermediate",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <SiReduxsaga color="#9810d2" size="40px" />,
       text: "redux toolkit",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiReduxsaga color="#9810d2" size="40px" />,
       text: "RTK Query",
       level: "advanced",
+      reverse: "flex-row-reverse",
     },
     {
       icon: <SiReactrouter color="#d23d10" size="40px" />,
       text: "React Router",
       level: "advanced",
+      reverse: "flex-row",
     },
     {
       icon: <SiReactquery color="#ee690a" size="40px" />,
       text: "react query",
       level: "beginner",
+      reverse: "flex-row-reverse",
     },
     {
       icon: (
@@ -113,6 +129,7 @@ const Skill = () => {
       ),
       text: "Next js",
       level: "intermediate",
+      reverse: "flex-row",
     },
   ];
 
@@ -130,6 +147,7 @@ const Skill = () => {
               icon={skillItem.icon}
               text={skillItem.text}
               level={skillItem.level}
+              reverse={skillItem.reverse}
             />
           </div>
         ))}

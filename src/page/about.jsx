@@ -9,7 +9,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 const About = () => {
   return (
     <React.Fragment>
-      <div className="dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-screen md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
+      <div className="dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-[calc(100vh-54px)] md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
         {/* <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -34,10 +34,10 @@ const About = () => {
           <p className="text-main-color md:text-[32px] text-[18px]">
             HELLO, WORLD!
           </p>
-          <p className="dark:text-white text-titleLightColor md:text-[50px] text-[24px] font-[700]">
+          <h3 className="dark:text-white text-titleLightColor md:text-[50px] text-[24px] font-[700]">
             I<span className="text-main-color">&apos;</span>m Obada Kahlous
             <span className="text-main-color">.</span>
-          </p>
+          </h3>
           <p className="dark:text-paragraphDarkColor text-paragraphLightColor">
             FRONT-END DEVELOPER
           </p>

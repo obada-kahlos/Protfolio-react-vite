@@ -1,9 +1,9 @@
 import React from "react";
 
-const Button = ({ text }) => {
+const Button = ({ text, onClick }) => {
   return (
     <React.Fragment>
-      <button className="button" type="submit">
+      <button className="button" type="submit" onClick={onClick}>
         {text}
       </button>
       <style>
