@@ -16,9 +16,12 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className="grid grid-cols-12 gap-4 p-2 rounded-xl transition dark:hover:bg-[rgba(0,0,0,0.4)] hover:bg-[rgba(125,125,125,0.12)] mb-[30px] ">
-      <div className="md:col-span-4 col-span-12 w-full h-full">
+      <div
+        className={`md:col-span-4 col-span-12 w-full h-full ${
+          image?.length > 1 ? "flex gap-2" : ""
+        }`}>
         {image?.map((item, key) => (
-          <LightGallery key={key} speed={500}>
+          <LightGallery speed={500} key={key}>
             <a href={item}>
               <LazyLoadImage
                 src={item}
@@ -82,14 +85,16 @@ export const ProjectCard = ({
               </span>
             </button>
           </a>
-          <a href={GitHubProject} target="_blank" rel="noreferrer">
-            <button className="dark:text-titleDarkColor text-titleLightColor flex items-center justify-center gap-2 border dark:border-[rgba(255,255,255,0.4)] border-paragraphLightColor rounded py-[10px] px-[15px] text-[16px] uppercase">
-              Github
-              <span className="flex justify-center items-center ml-[3px]">
-                <AiFillGithub />
-              </span>
-            </button>
-          </a>
+          {GitHubProject ? (
+            <a href={GitHubProject} target="_blank" rel="noreferrer">
+              <button className="dark:text-titleDarkColor text-titleLightColor flex items-center justify-center gap-2 border dark:border-[rgba(255,255,255,0.4)] border-paragraphLightColor rounded py-[10px] px-[15px] text-[16px] uppercase">
+                Github
+                <span className="flex justify-center items-center ml-[3px]">
+                  <AiFillGithub />
+                </span>
+              </button>
+            </a>
+          ) : null}
         </div>
       </div>
     </div>

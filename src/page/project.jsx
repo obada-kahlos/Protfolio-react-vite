@@ -6,8 +6,25 @@ import gameApp from "/public/image/gameApp.png";
 import bookAdmin from "/public/image/admin-book-image.png";
 import bookClient from "/public/image/client-book-image.png";
 
+import mdcin1 from "/public/image/mdcin1.png";
+import mdcin2 from "/public/image/mdcin2.png";
+import mdcin3 from "/public/image/mdcin3.png";
+import mdcin4 from "/public/image/mdcin4.png";
+
 const Project = () => {
   const ProjectsData = [
+    {
+      image: [mdcin1, mdcin2, mdcin3, mdcin4],
+      projectName: "Mdcin",
+      description1:
+        "The super admin can control the entire site by adding new admins, adding books, publishers, and other things.",
+      LiveDemo: "https://test.mdcin.com/",
+      list: [
+        "The App is by invitation only, but for now you can use this link to make sign up (https://test.mdcin.com/signup)",
+      ],
+      language:
+        "HTML - CSS - ReactJs - AstroJs - React Select - Formik - Yup Validation - TailwindCSS - Redux Toolkit - RTK Query - React Router Dom ",
+    },
     {
       image: [bookAdmin],
       projectName: "Book Admin App (In Progress)",
