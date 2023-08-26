@@ -17,7 +17,7 @@ const Project = () => {
       image: [mdcin1, mdcin2, mdcin3, mdcin4],
       projectName: "Mdcin",
       description1:
-        "The super admin can control the entire site by adding new admins, adding books, publishers, and other things.",
+        "Mdcin is a social network application for the doctor's class only developed by Nextinuous company. I developed most of the services and pages it contains from the front-end side",
       LiveDemo: "https://test.mdcin.com/",
       list: [
         "The App is by invitation only, but for now you can use this link to make sign up (https://test.mdcin.com/signup)",
