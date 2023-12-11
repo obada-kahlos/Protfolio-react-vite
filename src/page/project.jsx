@@ -2,7 +2,6 @@ import { ProjectCard } from "../components/project-card/project-card";
 
 import fylo from "/public/image/fylo.png";
 import AnimeClub from "/public/image/Anime-Club.png";
-import gameApp from "/public/image/gameApp.png";
 import bookAdmin from "/public/image/admin-book-image.png";
 import bookClient from "/public/image/client-book-image.png";
 
@@ -10,6 +9,13 @@ import mdcin1 from "/public/image/mdcin1.png";
 import mdcin2 from "/public/image/mdcin2.png";
 import mdcin3 from "/public/image/mdcin3.png";
 import mdcin4 from "/public/image/mdcin4.png";
+
+import game1 from "/image/game1.png";
+import game2 from "/image/game2.png";
+import game3 from "/image/game3.png";
+import game4 from "/image/game4.png";
+import game5 from "/image/game5.png";
+import game6 from "/image/game6.png";
 
 const Project = () => {
   const ProjectsData = [
@@ -61,7 +67,7 @@ const Project = () => {
       GitHubProject: "https://github.com/obada-kahlos/e-book-client-nextJS",
     },
     {
-      image: [gameApp],
+      image: [game1, game2, game3, game4, game5, game6],
       projectName: "Game App",
       description1: "Web site for games, i used Apis from Rapidapi",
       list: [
