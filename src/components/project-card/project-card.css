@@ -1,0 +1,5 @@
+.custom-wrapper-class {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

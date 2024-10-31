@@ -5,10 +5,21 @@ import AnimeClub from "/public/image/Anime-Club.png";
 import bookAdmin from "/public/image/admin-book-image.png";
 import bookClient from "/public/image/client-book-image.png";
 
-import mdcin1 from "/public/image/mdcin1.png";
-import mdcin2 from "/public/image/mdcin2.png";
-import mdcin3 from "/public/image/mdcin3.png";
-import mdcin4 from "/public/image/mdcin4.png";
+import mdcin1 from "/public/image/mdcin/mdcin-1.png";
+import mdcin2 from "/public/image/mdcin/mdcin-2.png";
+import mdcin3 from "/public/image/mdcin/mdcin-3.png";
+import mdcin4 from "/public/image/mdcin/mdcin-4.png";
+import mdcin5 from "/public/image/mdcin/mdcin-5.png";
+import mdcin6 from "/public/image/mdcin/mdcin-6.png";
+import mdcin7 from "/public/image/mdcin/mdcin-7.png";
+import mdcin8 from "/public/image/mdcin/mdcin-8.png";
+import mdcin9 from "/public/image/mdcin/mdcin-9.png";
+
+import beingMuslim1 from "/public/image/being-muslim/being-muslim-1.png";
+import beingMuslim2 from "/public/image/being-muslim/being-muslim-2.png";
+import beingMuslim3 from "/public/image/being-muslim/being-muslim-3.png";
+
+import dawaa1 from "/public/image/dawaa/dawaa-1.png";
 
 import game1 from "/image/game1.png";
 import game2 from "/image/game2.png";
@@ -20,7 +31,17 @@ import game6 from "/image/game6.png";
 const Project = () => {
   const ProjectsData = [
     {
-      image: [mdcin1, mdcin2, mdcin3, mdcin4],
+      image: [
+        mdcin1,
+        mdcin2,
+        mdcin3,
+        mdcin4,
+        mdcin5,
+        mdcin6,
+        mdcin7,
+        mdcin8,
+        mdcin9,
+      ],
       projectName: "Mdcin",
       description1:
         "Mdcin is a social network application for the doctor's class only developed by Nextinuous company. I developed most of the services and pages it contains from the front-end side",
@@ -30,6 +51,26 @@ const Project = () => {
       ],
       language:
         "HTML - CSS - ReactJs - AstroJs - React Select - Formik - Yup Validation - TailwindCSS - Redux Toolkit - RTK Query - React Router Dom ",
+    },
+    {
+      image: [beingMuslim1, beingMuslim2, beingMuslim3],
+      projectName: "Being Muslim (Stack/Dev)",
+      description1: "Being Muslim",
+      description2: "Description",
+      LiveDemo: "https://app-dev.bemuslim.ai/today/post/",
+      list: [],
+      language:
+        "HTML - CSS - ReactJs - React form hook - Yup/zod Validation - Minimals/MUI - Context API - RTK Query - React Router Dom - GQL - Apollo client - Figma",
+    },
+    {
+      image: [dawaa1],
+      projectName: "Surplus meds (Stack/Dev)",
+      description1: "Surplus meds",
+      description2: "Description",
+      LiveDemo: "https://staging.surplusmeds.com/client",
+      list: [],
+      language:
+        "HTML - CSS - ReactJs - React form hook - Yup Validation - Minimals/MUI - Context API - RTK Query - React Router Dom - Restful - Axios - Figma",
     },
     {
       image: [bookAdmin],
@@ -109,7 +150,7 @@ const Project = () => {
           <>
             <ProjectCard
               key={key}
-              image={item.image}
+              images={item.image}
               language={item.language}
               projectName={item.projectName}
               description1={item.description1}

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import LightGallery from "lightgallery/react";
+
 import { AiOutlineGlobal, AiFillGithub } from "react-icons/ai";
+import { ImgSlider } from "../img-slider";
 
 export const ProjectCard = ({
-  image,
+  images,
   projectName,
   description1,
   description2,
@@ -16,29 +16,8 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className="grid grid-cols-12 gap-4 p-2 rounded-xl transition dark:hover:bg-[rgba(0,0,0,0.4)] hover:bg-[rgba(125,125,125,0.12)] mb-[30px] ">
-      <div
-        className={`md:col-span-4 col-span-12 w-full h-full ${
-          image?.length > 1 ? "flex gap-2" : ""
-        }`}>
-        {image?.map((item, key) => (
-          <LightGallery speed={500} key={key}>
-            <a href={item}>
-              <LazyLoadImage
-                src={item}
-                alt={projectName}
-                width={"100%"}
-                effect={"blur"}
-                className="border h-[250px] object-cover dark:border-[rgba(255,255,255,0.5)] rounded-md"
-                delayTime={5000}
-                threshold={5000}
-                placeholderSrc={item}
-              />
-            </a>
-          </LightGallery>
-        ))}
-        {/* <LazyLoadImage>
-          <img src={image} alt={projectName} className="w-full" />
-        </LazyLoadImage> */}
+      <div className={`md:col-span-4 col-span-12 w-full h-full`}>
+        <ImgSlider images={images} />
       </div>
       <div className="md:col-span-8 col-span-12 w-full h-full flex justify-between items-start flex-col gap-4">
         <div>
@@ -62,7 +41,8 @@ export const ProjectCard = ({
             {list?.map((item, key) => (
               <li
                 key={key}
-                className="ml-[20px] dark:text-paragraphDarkColor text-paragraphLightColor">
+                className="ml-[20px] dark:text-paragraphDarkColor text-paragraphLightColor"
+              >
                 {item}
               </li>
             ))}

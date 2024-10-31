@@ -10,10 +10,6 @@ const About = () => {
   return (
     <React.Fragment>
       <div className="dark:bg-secondDarkBgColor bg-whiteLightBgColor min-h-[calc(100vh-54px)] md:px-[20px] w-full flex justify-center flex-col items-center text-[#fff]">
-        {/* <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}> */}
         <LightGallery speed={500}>
           <a href={obadaImage}>
             <LazyLoadImage
@@ -42,7 +38,7 @@ const About = () => {
             FRONT-END DEVELOPER
           </p>
           <p className="dark:text-paragraphDarkColor text-paragraphLightColor md:text-[18px] text-[14px] md:w-10/12 w-12/12 text-center mt-[10px]">
-            Front-End Developer with +2 year of experience working with React.Js
+            Front-End Developer with +3 year of experience working with React.Js
             | Next.Js, excellent experience in problem-solving, self-learning
             and working time management, the ability to adapt to different work
             environments and good communication with the team work
@@ -52,21 +48,24 @@ const About = () => {
               target="_blank"
               rel="noreferrer"
               href="https://wa.me/963947059779"
-              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor"
+            >
               <FaWhatsapp />
             </a>
             <a
               href="https://github.com/obada-kahlos"
               target="_blank"
               rel="noreferrer"
-              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor"
+            >
               <FaGithubAlt />
             </a>
             <a
               href="https://www.linkedin.com/in/obada-kahlous"
               target="_blank"
               rel="noreferrer"
-              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor">
+              className="w-[30px] h-[30px] cursor-pointer rounded-full flex justify-center items-center dark:text-[#cecece] text-paragraphLightColor border dark:border-whiteLightBgColor border-titleLightColor"
+            >
               <AiFillLinkedin />
             </a>
           </div>
