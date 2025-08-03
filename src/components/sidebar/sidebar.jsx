@@ -67,10 +67,10 @@ export const Sidebar = ({ isOpen, onClose }) => {
                 </NavLink>
               ))}
               <Link
-                to={"/Pdf/CV.pdf"}
+                to={"/Pdf/Obada-Kahlous.pdf"}
                 target="_blank"
                 rel="noreferrer"
-                download={"Obada-Kahlous_CV.pdf"}>
+                download={"Obada-Kahlous.pdf"}>
                 <li
                   onClick={onClose}
                   className="transition hover:bg-main-color cursor-pointer dark:text-white hover:text-[#fff] px-[20px] flex items-center gap-2 py-[15px] mb-[0px] w-full">

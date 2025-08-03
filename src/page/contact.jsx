@@ -26,7 +26,7 @@ const Contact = () => {
   const handleSendEmail = (e) => {
     setIsLoading(true);
     emailjs
-      .send("service_3cp3xmu", "template_okwbtzk", e, "1VXwoicodZDNi66Cr")
+      .send("service_3cp3xmu", "template_okwbtzk", e, "3nzCwGFOkRTnv9PUx")
       .then((res) => {
         setStatus(res.status);
       })
