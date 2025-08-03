@@ -57,14 +57,17 @@ export const ProjectCard = ({
           </div>
         </div>
         <div className="flex gap-[10px]">
-          <a href={LiveDemo} target="_blank" rel="noreferrer">
-            <button className="dark:text-titleDarkColor text-titleLightColor flex items-center justify-center gap-2 border dark:border-[rgba(255,255,255,0.4)] border-paragraphLightColor rounded py-[10px] px-[15px] text-[16px] uppercase">
-              Live Demo
-              <span className="flex justify-center items-center ml-[3px]">
-                <AiOutlineGlobal />
-              </span>
-            </button>
-          </a>
+          {
+            LiveDemo &&
+            <a href={LiveDemo} target="_blank" rel="noreferrer">
+              <button className="dark:text-titleDarkColor text-titleLightColor flex items-center justify-center gap-2 border dark:border-[rgba(255,255,255,0.4)] border-paragraphLightColor rounded py-[10px] px-[15px] text-[16px] uppercase">
+                Live Demo
+                <span className="flex justify-center items-center ml-[3px]">
+                  <AiOutlineGlobal />
+                </span>
+              </button>
+            </a>
+          }
           {GitHubProject ? (
             <a href={GitHubProject} target="_blank" rel="noreferrer">
               <button className="dark:text-titleDarkColor text-titleLightColor flex items-center justify-center gap-2 border dark:border-[rgba(255,255,255,0.4)] border-paragraphLightColor rounded py-[10px] px-[15px] text-[16px] uppercase">
